@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    height: 100vh;
+}
+
+.bg-main
+{
+  background-color: #392eaa;
+}
+
+.bg-button
+{
+  background-color: #F15A24;
+  border-radius: 6px;
+  border-width: 0;
+}
+
+.bg-button:hover
+{
+  background-color: #d34f1f !important;
+}
+
+.card-shadow
+{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.card-title
+{
+  font-weight: 600;
+}
+
+.img-grayscale {
+  filter: grayscale(100%);
+  opacity: 0.1;
+}

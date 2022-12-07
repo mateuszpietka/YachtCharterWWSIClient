@@ -13,6 +13,12 @@ import { YachtListComponent } from './yacht-list/yacht-list.component';
 import { YachtDetailsComponent } from './yacht-details/yacht-details.component';
 import { SchedulesComponent } from './schedules/schedules.component';
 import { InfoCompanyComponent } from './info-company/info-company.component';
+import {DropdownModule} from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CalendarModule} from 'primeng/calendar';
+import { MessageService } from 'primeng/api';
+import { ReservationApiController } from './api/controllers/resevation-api.controller';
 
 @NgModule({
   declarations: [
@@ -27,12 +33,16 @@ import { InfoCompanyComponent } from './info-company/info-company.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ButtonModule,
     HttpClientModule,
-    TableModule
+    TableModule,
+    DropdownModule,
+    FormsModule,
+    CalendarModule
   ],
-  providers: [YachtApiController],
+  providers: [YachtApiController, ReservationApiController, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

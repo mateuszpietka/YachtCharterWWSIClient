@@ -32,29 +32,11 @@ export class BaseApiController {
     );
   }
 
-  protected put<TData>(
-    url: string,
-    data: any,
-  ): Observable<TData> {
-    return this.request<TData>('PUT', url, data, undefined).pipe(
-      map((response) => response.body!)
-    );
-  }
-
   protected post<TData>(
     url: string,
     data: any,
   ): Observable<TData> {
     return this.request<TData>('POST', url, data, null).pipe(
-      map((response) => response.body!)
-    );
-  }
-
-  protected delete<TData>(
-    url: string,
-    data?: any,
-  ): Observable<TData> {
-    return this.request<TData>('DELETE', url, data, null).pipe(
       map((response) => response.body!)
     );
   }
